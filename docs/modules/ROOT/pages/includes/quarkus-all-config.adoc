@@ -1319,6 +1319,139 @@ endif::add-copy-button-to-env-var[]
 |`+++empty list+++`
 
 
+h|[.extension-name]##Quarkus LangChain4j - A2A Apicurio Registry - Runtime##
+h|Type
+h|Default
+
+a|icon:lock[title=Fixed at build time] [[quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-enabled]] [.property-path]##link:#quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-enabled[`+++quarkus.langchain4j.a2a.apicurio-registry.enabled+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.a2a.apicurio-registry.enabled+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+Whether the Apicurio Registry A2A agent discovery integration is enabled.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_ENABLED+++`
+endif::add-copy-button-to-env-var[]
+--
+|boolean
+|`+++true+++`
+
+a| [[quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-url]] [.property-path]##link:#quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-url[`+++quarkus.langchain4j.a2a.apicurio-registry.url+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.a2a.apicurio-registry.url+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+The base URL of the Apicurio Registry instance (e.g. http://localhost:8080/apis/registry/v3).
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_URL+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_URL+++`
+endif::add-copy-button-to-env-var[]
+--
+|string
+|
+
+a| [[quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-auth-token]] [.property-path]##link:#quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-auth-token[`+++quarkus.langchain4j.a2a.apicurio-registry.auth-token+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.a2a.apicurio-registry.auth-token+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+Optional authentication token for the registry.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_AUTH_TOKEN+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_AUTH_TOKEN+++`
+endif::add-copy-button-to-env-var[]
+--
+|string
+|
+
+a| [[quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-group-id]] [.property-path]##link:#quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-group-id[`+++quarkus.langchain4j.a2a.apicurio-registry.group-id+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.a2a.apicurio-registry.group-id+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+Group ID to use when publishing and searching agent cards.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_GROUP_ID+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_GROUP_ID+++`
+endif::add-copy-button-to-env-var[]
+--
+|string
+|`+++default+++`
+
+a| [[quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-agent-url]] [.property-path]##link:#quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-agent-url[`+++quarkus.langchain4j.a2a.apicurio-registry.agent-url+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.a2a.apicurio-registry.agent-url+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+The base URL of this application's A2A server endpoint, used when publishing the agent card.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_AGENT_URL+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_AGENT_URL+++`
+endif::add-copy-button-to-env-var[]
+--
+|string
+|
+
+a| [[quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-default-input-keys]] [.property-path]##link:#quarkus-langchain4j-a2a-apicurio-registry_quarkus-langchain4j-a2a-apicurio-registry-default-input-keys[`+++quarkus.langchain4j.a2a.apicurio-registry.default-input-keys+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.a2a.apicurio-registry.default-input-keys+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+The input keys used for agents discovered from the registry whose agent card artifact does not declare an `a2a-input-keys` label.
+
+A2A agent cards carry no input schema, so discovered agents are built as untyped agents and these keys define both the arguments exposed to a supervisor or planner and the keys read from the `AgenticScope` when invoking the remote agent.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_DEFAULT_INPUT_KEYS+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_A2A_APICURIO_REGISTRY_DEFAULT_INPUT_KEYS+++`
+endif::add-copy-button-to-env-var[]
+--
+|list of string
+|`+++input+++`
+
+
 h|[.extension-name]##Quarkus LangChain4j - AI Gemini##
 h|Type
 h|Default
@@ -7054,10 +7187,10 @@ The name of the proxy configuration to use, as registered in the Quarkus Proxy R
 
 Precedence rules:
 
- - If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
- - If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
- - If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
- - If set but no proxy configuration is found with that name, an error is thrown at runtime.
+ * If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
+ * If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
+ * If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
+ * If set but no proxy configuration is found with that name, an error is thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -7722,10 +7855,10 @@ The name of the proxy configuration to use, as registered in the Quarkus Proxy R
 
 Precedence rules:
 
- - If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
- - If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
- - If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
- - If set but no proxy configuration is found with that name, an error is thrown at runtime.
+ * If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
+ * If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
+ * If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
+ * If set but no proxy configuration is found with that name, an error is thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -8491,10 +8624,10 @@ The name of the proxy configuration to use, as registered in the Quarkus Proxy R
 
 Precedence rules:
 
- - If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
- - If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
- - If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
- - If set but no proxy configuration is found with that name, an error is thrown at runtime.
+ * If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
+ * If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
+ * If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
+ * If set but no proxy configuration is found with that name, an error is thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -9305,10 +9438,10 @@ The name of the proxy configuration to use, as registered in the Quarkus Proxy R
 
 Precedence rules:
 
- - If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
- - If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
- - If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
- - If set but no proxy configuration is found with that name, an error is thrown at runtime.
+ * If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
+ * If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
+ * If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
+ * If set but no proxy configuration is found with that name, an error is thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -9973,10 +10106,10 @@ The name of the proxy configuration to use, as registered in the Quarkus Proxy R
 
 Precedence rules:
 
- - If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
- - If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
- - If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
- - If set but no proxy configuration is found with that name, an error is thrown at runtime.
+ * If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
+ * If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
+ * If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
+ * If set but no proxy configuration is found with that name, an error is thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -10742,10 +10875,10 @@ The name of the proxy configuration to use, as registered in the Quarkus Proxy R
 
 Precedence rules:
 
- - If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
- - If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
- - If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
- - If set but no proxy configuration is found with that name, an error is thrown at runtime.
+ * If set, it takes precedence over the deprecated `proxy-address`, `proxy-user`, `proxy-password` and `non-proxy-hosts` properties, which are ignored.
+ * If not set and a default proxy configuration is configured (`quarkus.proxy.++*++`), then that one is used.
+ * If set, the configuration from `quarkus.proxy.<name>.++*++` is used.
+ * If set but no proxy configuration is found with that name, an error is thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -16283,6 +16416,74 @@ endif::add-copy-button-to-env-var[]
 
 
 
+h|[.extension-name]##Quarkus LangChain4j - MCP Apicurio Registry - Runtime##
+h|Type
+h|Default
+
+a|icon:lock[title=Fixed at build time] [[quarkus-langchain4j-mcp-apicurio-registry_quarkus-langchain4j-mcp-apicurio-registry-enabled]] [.property-path]##link:#quarkus-langchain4j-mcp-apicurio-registry_quarkus-langchain4j-mcp-apicurio-registry-enabled[`+++quarkus.langchain4j.mcp.apicurio-registry.enabled+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.mcp.apicurio-registry.enabled+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+Whether the Apicurio Registry MCP integration is enabled.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_MCP_APICURIO_REGISTRY_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_MCP_APICURIO_REGISTRY_ENABLED+++`
+endif::add-copy-button-to-env-var[]
+--
+|boolean
+|`+++true+++`
+
+a| [[quarkus-langchain4j-mcp-apicurio-registry_quarkus-langchain4j-mcp-apicurio-registry-url]] [.property-path]##link:#quarkus-langchain4j-mcp-apicurio-registry_quarkus-langchain4j-mcp-apicurio-registry-url[`+++quarkus.langchain4j.mcp.apicurio-registry.url+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.mcp.apicurio-registry.url+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+The base URL of the Apicurio Registry instance (e.g. http://localhost:8080/apis/registry/v3).
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_MCP_APICURIO_REGISTRY_URL+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_MCP_APICURIO_REGISTRY_URL+++`
+endif::add-copy-button-to-env-var[]
+--
+|string
+|required icon:exclamation-circle[title=Configuration property is required]
+
+a| [[quarkus-langchain4j-mcp-apicurio-registry_quarkus-langchain4j-mcp-apicurio-registry-tool-provider]] [.property-path]##link:#quarkus-langchain4j-mcp-apicurio-registry_quarkus-langchain4j-mcp-apicurio-registry-tool-provider[`+++quarkus.langchain4j.mcp.apicurio-registry.tool-provider+++`]##
+ifdef::add-copy-button-to-config-props[]
+config_property_copy_button:+++quarkus.langchain4j.mcp.apicurio-registry.tool-provider+++[]
+endif::add-copy-button-to-config-props[]
+
+
+[.description]
+--
+Optional: name of the tool provider to target when the application uses multiple tool providers. If not set, the default tool provider is used.
+
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_LANGCHAIN4J_MCP_APICURIO_REGISTRY_TOOL_PROVIDER+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_LANGCHAIN4J_MCP_APICURIO_REGISTRY_TOOL_PROVIDER+++`
+endif::add-copy-button-to-env-var[]
+--
+|string
+|
+
+
 h|[.extension-name]##Quarkus Langchain4j - Memory Store - MongoDB##
 h|Type
 h|Default
@@ -18483,11 +18684,11 @@ endif::add-copy-button-to-config-props[]
 --
 The query to use when retrieving embeddings. This query has to return the following columns:
 
- - metadata
- - score
- - column of the same name as the 'id-property' value
- - column of the same name as the 'text-property' value
- - column of the same name as the 'embedding-property' value
+ * metadata
+ * score
+ * column of the same name as the 'id-property' value
+ * column of the same name as the 'text-property' value
+ * column of the same name as the 'embedding-property' value
 
 
 
@@ -18732,11 +18933,11 @@ endif::add-copy-button-to-config-props[]
 --
 The query to use when retrieving embeddings. This query has to return the following columns:
 
- - metadata
- - score
- - column of the same name as the 'id-property' value
- - column of the same name as the 'text-property' value
- - column of the same name as the 'embedding-property' value
+ * metadata
+ * score
+ * column of the same name as the 'id-property' value
+ * column of the same name as the 'text-property' value
+ * column of the same name as the 'embedding-property' value
 
 
 
@@ -20685,10 +20886,10 @@ Proxy configuration name.
 
 There are some rules for using Quarkus Proxy Registry configuration:
 
- - If `quarkus.langchain4j.openai.proxy-configuration-name` is set, it takes precedence over `proxy-host` configuration.
- - If not set and the default proxy configuration is configured (`quarkus.proxy.++*++`) then that will be used.
- - If the proxy configuration name is set, the configuration from `quarkus.proxy.<name>.++*++` will be used.
- - If the proxy configuration name is set, but no proxy configuration is found with that name, then an error will be thrown at runtime.
+ * If `quarkus.langchain4j.openai.proxy-configuration-name` is set, it takes precedence over `proxy-host` configuration.
+ * If not set and the default proxy configuration is configured (`quarkus.proxy.++*++`) then that will be used.
+ * If the proxy configuration name is set, the configuration from `quarkus.proxy.<name>.++*++` will be used.
+ * If the proxy configuration name is set, but no proxy configuration is found with that name, then an error will be thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -22248,10 +22449,10 @@ Proxy configuration name.
 
 There are some rules for using Quarkus Proxy Registry configuration:
 
- - If `quarkus.langchain4j.openai.proxy-configuration-name` is set, it takes precedence over `proxy-host` configuration.
- - If not set and the default proxy configuration is configured (`quarkus.proxy.++*++`) then that will be used.
- - If the proxy configuration name is set, the configuration from `quarkus.proxy.<name>.++*++` will be used.
- - If the proxy configuration name is set, but no proxy configuration is found with that name, then an error will be thrown at runtime.
+ * If `quarkus.langchain4j.openai.proxy-configuration-name` is set, it takes precedence over `proxy-host` configuration.
+ * If not set and the default proxy configuration is configured (`quarkus.proxy.++*++`) then that will be used.
+ * If the proxy configuration name is set, the configuration from `quarkus.proxy.<name>.++*++` will be used.
+ * If the proxy configuration name is set, but no proxy configuration is found with that name, then an error will be thrown at runtime.
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -23889,9 +24090,9 @@ endif::add-copy-button-to-config-props[]
 --
 Whether to create the embedding table if it does not already exist, replace it, or do nothing.
 
- - `CREATE_NONE`: the table must already exist
- - `CREATE_IF_NOT_EXISTS`: create the table if it does not exist
- - `CREATE_OR_REPLACE`: drop and recreate the table
+ * `CREATE_NONE`: the table must already exist
+ * `CREATE_IF_NOT_EXISTS`: create the table if it does not exist
+ * `CREATE_OR_REPLACE`: drop and recreate the table
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -24086,9 +24287,9 @@ endif::add-copy-button-to-config-props[]
 --
 Whether to create the embedding table if it does not already exist, replace it, or do nothing.
 
- - `CREATE_NONE`: the table must already exist
- - `CREATE_IF_NOT_EXISTS`: create the table if it does not exist
- - `CREATE_OR_REPLACE`: drop and recreate the table
+ * `CREATE_NONE`: the table must already exist
+ * `CREATE_IF_NOT_EXISTS`: create the table if it does not exist
+ * `CREATE_OR_REPLACE`: drop and recreate the table
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -24220,9 +24421,9 @@ endif::add-copy-button-to-config-props[]
 --
 Whether to create the IVF vector index.
 
- - `CREATE_NONE`: do not create an index
- - `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
- - `CREATE_OR_REPLACE`: drop and recreate the index
+ * `CREATE_NONE`: do not create an index
+ * `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
+ * `CREATE_OR_REPLACE`: drop and recreate the index
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -24397,9 +24598,9 @@ endif::add-copy-button-to-config-props[]
 --
 Whether to create the metadata index.
 
- - `CREATE_NONE`: do not create the index
- - `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
- - `CREATE_OR_REPLACE`: drop and recreate the index
+ * `CREATE_NONE`: do not create the index
+ * `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
+ * `CREATE_OR_REPLACE`: drop and recreate the index
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -24491,9 +24692,9 @@ endif::add-copy-button-to-config-props[]
 --
 Whether to create the IVF vector index.
 
- - `CREATE_NONE`: do not create an index
- - `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
- - `CREATE_OR_REPLACE`: drop and recreate the index
+ * `CREATE_NONE`: do not create an index
+ * `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
+ * `CREATE_OR_REPLACE`: drop and recreate the index
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -24668,9 +24869,9 @@ endif::add-copy-button-to-config-props[]
 --
 Whether to create the metadata index.
 
- - `CREATE_NONE`: do not create the index
- - `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
- - `CREATE_OR_REPLACE`: drop and recreate the index
+ * `CREATE_NONE`: do not create the index
+ * `CREATE_IF_NOT_EXISTS`: create the index if it does not exist
+ * `CREATE_OR_REPLACE`: drop and recreate the index
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -24951,9 +25152,9 @@ endif::add-copy-button-to-config-props[]
 --
 Metadata type:
 
- - COLUMN_PER_KEY: for static metadata, when you know in advance the list of metadata fields. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to define the right columns.
- - COMBINED_JSON: For dynamic metadata, when you don't know the list of metadata fields that will be used.
- - COMBINED_JSONB: Same as JSON, but stored in a binary way. Optimized for query on large dataset. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to change the type of the `metadata` column to COMBINED_JSONB.
+ * COLUMN_PER_KEY: for static metadata, when you know in advance the list of metadata fields. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to define the right columns.
+ * COMBINED_JSON: For dynamic metadata, when you don't know the list of metadata fields that will be used.
+ * COMBINED_JSONB: Same as JSON, but stored in a binary way. Optimized for query on large dataset. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to change the type of the `metadata` column to COMBINED_JSONB.
 
 
 
@@ -25007,9 +25208,9 @@ Metadata Indexes, list of fields to use as index.
 
 For instance:
 
- - JSON: with JSON metadata, indexes are not allowed, so this property must be empty. To use indexes, switch to JSONB metadata.
- - JSONB: (metadata->'key'), (metadata->'name'), (metadata->'age')
- - COLUMNS: key, name, age
+ * JSON: with JSON metadata, indexes are not allowed, so this property must be empty. To use indexes, switch to JSONB metadata.
+ * JSONB: (metadata->'key'), (metadata->'name'), (metadata->'age')
+ * COLUMNS: key, name, age
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -25032,9 +25233,9 @@ endif::add-copy-button-to-config-props[]
 --
 Index Type:
 
- - BTREE (default)
- - GIN
- - Other link:https://www.postgresql.org/docs/current/indexes-types.html[PostgreSQL index types]
+ * BTREE (default)
+ * GIN
+ * Other link:https://www.postgresql.org/docs/current/indexes-types.html[PostgreSQL index types]
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -25229,9 +25430,9 @@ endif::add-copy-button-to-config-props[]
 --
 Metadata type:
 
- - COLUMN_PER_KEY: for static metadata, when you know in advance the list of metadata fields. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to define the right columns.
- - COMBINED_JSON: For dynamic metadata, when you don't know the list of metadata fields that will be used.
- - COMBINED_JSONB: Same as JSON, but stored in a binary way. Optimized for query on large dataset. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to change the type of the `metadata` column to COMBINED_JSONB.
+ * COLUMN_PER_KEY: for static metadata, when you know in advance the list of metadata fields. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to define the right columns.
+ * COMBINED_JSON: For dynamic metadata, when you don't know the list of metadata fields that will be used.
+ * COMBINED_JSONB: Same as JSON, but stored in a binary way. Optimized for query on large dataset. In this case, you should also override the `quarkus.langchain4j.pgvector.metadata.column-definitions` property to change the type of the `metadata` column to COMBINED_JSONB.
 
 
 
@@ -25285,9 +25486,9 @@ Metadata Indexes, list of fields to use as index.
 
 For instance:
 
- - JSON: with JSON metadata, indexes are not allowed, so this property must be empty. To use indexes, switch to JSONB metadata.
- - JSONB: (metadata->'key'), (metadata->'name'), (metadata->'age')
- - COLUMNS: key, name, age
+ * JSON: with JSON metadata, indexes are not allowed, so this property must be empty. To use indexes, switch to JSONB metadata.
+ * JSONB: (metadata->'key'), (metadata->'name'), (metadata->'age')
+ * COLUMNS: key, name, age
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -25310,9 +25511,9 @@ endif::add-copy-button-to-config-props[]
 --
 Index Type:
 
- - BTREE (default)
- - GIN
- - Other link:https://www.postgresql.org/docs/current/indexes-types.html[PostgreSQL index types]
+ * BTREE (default)
+ * GIN
+ * Other link:https://www.postgresql.org/docs/current/indexes-types.html[PostgreSQL index types]
 
 
 ifdef::add-copy-button-to-env-var[]
@@ -29323,8 +29524,8 @@ Specifies how the model should choose which tool to call during a request.
 
 This value can be:
 
- - *auto*: The model decides whether and which tool to call automatically.
- - *required*: The model must call one of the available tools.
+ * *auto*: The model decides whether and which tool to call automatically.
+ * *required*: The model must call one of the available tools.
 
 
 
@@ -30163,8 +30364,8 @@ Specifies how the model should choose which tool to call during a request.
 
 This value can be:
 
- - *auto*: The model decides whether and which tool to call automatically.
- - *required*: The model must call one of the available tools.
+ * *auto*: The model decides whether and which tool to call automatically.
+ * *required*: The model must call one of the available tools.
 
 
 
@@ -30831,8 +31032,8 @@ Specifies how the model should choose which tool to call during a request.
 
 This value can be:
 
- - *auto*: The model decides whether and which tool to call automatically.
- - *required*: The model must call one of the available tools.
+ * *auto*: The model decides whether and which tool to call automatically.
+ * *required*: The model must call one of the available tools.
 
 
 
@@ -33289,8 +33490,8 @@ Specifies how the model should choose which tool to call during a request.
 
 This value can be:
 
- - *auto*: The model decides whether and which tool to call automatically.
- - *required*: The model must call one of the available tools.
+ * *auto*: The model decides whether and which tool to call automatically.
+ * *required*: The model must call one of the available tools.
 
 
 
@@ -34129,8 +34330,8 @@ Specifies how the model should choose which tool to call during a request.
 
 This value can be:
 
- - *auto*: The model decides whether and which tool to call automatically.
- - *required*: The model must call one of the available tools.
+ * *auto*: The model decides whether and which tool to call automatically.
+ * *required*: The model must call one of the available tools.
 
 
 
@@ -34797,8 +34998,8 @@ Specifies how the model should choose which tool to call during a request.
 
 This value can be:
 
- - *auto*: The model decides whether and which tool to call automatically.
- - *required*: The model must call one of the available tools.
+ * *auto*: The model decides whether and which tool to call automatically.
+ * *required*: The model must call one of the available tools.
 
 
 

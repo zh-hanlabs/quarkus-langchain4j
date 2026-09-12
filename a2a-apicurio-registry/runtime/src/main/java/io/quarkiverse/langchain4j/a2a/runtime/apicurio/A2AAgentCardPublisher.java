@@ -9,20 +9,20 @@ import org.a2aproject.sdk.spec.AgentInterface;
 import org.a2aproject.sdk.spec.AgentSkill;
 import org.jboss.logging.Logger;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import io.apicurio.registry.rest.client.RegistryClient;
 import io.apicurio.registry.rest.client.models.CreateArtifact;
 import io.apicurio.registry.rest.client.models.CreateVersion;
 import io.apicurio.registry.rest.client.models.Labels;
 import io.apicurio.registry.rest.client.models.VersionContent;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
 
 public class A2AAgentCardPublisher {
 
     private static final Logger log = Logger.getLogger(A2AAgentCardPublisher.class);
     private static final String AGENT_CARD_TYPE = "AGENT_CARD";
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+    private static final ObjectMapper OBJECT_MAPPER = JsonMapper.builder().build();
 
     private final RegistryClient registryClient;
     private final String groupId;
@@ -64,7 +64,7 @@ public class A2AAgentCardPublisher {
     private String serializeAgentCard(AgentCard agentCard) {
         try {
             return OBJECT_MAPPER.writeValueAsString(agentCard);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             throw new RuntimeException("Failed to serialize agent card for '" + agentName + "'", e);
         }
     }

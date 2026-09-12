@@ -15,12 +15,6 @@ import org.beehive.gpullama3.model.format.ChatFormat;
 import org.beehive.gpullama3.model.format.ToolCallExtract;
 import org.jboss.logging.Logger;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.util.DefaultIndenter;
-import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;
@@ -30,6 +24,12 @@ import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.internal.Json;
 import dev.langchain4j.internal.JsonSchemaElementUtils;
 import dev.langchain4j.model.chat.request.ChatRequest;
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.util.DefaultIndenter;
+import tools.jackson.core.util.DefaultPrettyPrinter;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectWriter;
+import tools.jackson.databind.json.JsonMapper;
 
 abstract class GPULlama3BaseModel {
 
@@ -281,12 +281,12 @@ abstract class GPULlama3BaseModel {
         return sb.toString();
     }
 
-    private static final ObjectMapper TOOL_MAPPER = new ObjectMapper();
+    private static final ObjectMapper TOOL_MAPPER = JsonMapper.builder().build();
     /** Compact single-line JSON writer — Qwen3 ChatML tool list. */
     private static final ObjectWriter COMPACT_TOOL_WRITER = TOOL_MAPPER.writer();
     /** 4-space pretty JSON writer — Llama Instruct tool list (matches the template's {@code tojson(indent=4)}). */
-    private static final ObjectWriter PRETTY_TOOL_WRITER = TOOL_MAPPER.writer(
-            new DefaultPrettyPrinter()
+    private static final ObjectWriter PRETTY_TOOL_WRITER = TOOL_MAPPER.writerWithDefaultPrettyPrinter()
+            .with(new DefaultPrettyPrinter()
                     .withObjectIndenter(new DefaultIndenter("    ", "\n"))
                     .withArrayIndenter(new DefaultIndenter("    ", "\n")));
 
@@ -351,7 +351,7 @@ abstract class GPULlama3BaseModel {
     private static String writeJson(ObjectWriter writer, Object value) {
         try {
             return writer.writeValueAsString(value);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             throw new RuntimeException("Failed to serialize tool definition JSON", e);
         }
     }

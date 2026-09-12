@@ -20,10 +20,6 @@ import jakarta.ws.rs.core.MultivaluedMap;
 import org.jboss.logging.Logger;
 import org.jboss.resteasy.reactive.common.util.MultivaluedTreeMap;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import dev.langchain4j.mcp.client.McpCallContext;
 import dev.langchain4j.mcp.client.McpHeadersSupplier;
 import dev.langchain4j.mcp.client.transport.McpHeaderEncoding;
@@ -40,6 +36,10 @@ import io.vertx.core.MultiMap;
 import io.vertx.core.http.HttpClient;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.http.RequestOptions;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
 
 public class QuarkusStreamableHttpMcpTransport implements McpTransport {
 
@@ -49,7 +49,7 @@ public class QuarkusStreamableHttpMcpTransport implements McpTransport {
     private final Duration timeout;
     private final boolean logResponses;
     private final boolean logRequests;
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = JsonMapper.builder().build();
     private final AtomicReference<String> mcpSessionId = new AtomicReference<>();
     private volatile McpOperationHandler operationHandler;
     private final McpClientAuthProvider mcpClientAuthProvider;
@@ -181,7 +181,7 @@ public class QuarkusStreamableHttpMcpTransport implements McpTransport {
         String body;
         try {
             body = objectMapper.writeValueAsString(request);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             future.completeExceptionally(e);
             return uni;
         }
@@ -219,7 +219,7 @@ public class QuarkusStreamableHttpMcpTransport implements McpTransport {
                         options.addHeader("Mcp-Name", McpHeaderEncoding.encode(uri));
                     }
                 }
-            } catch (JsonProcessingException e) {
+            } catch (JacksonException e) {
                 // If we can't parse the body, continue without method/name headers
                 log.warn("Failed to parse request body for modern protocol headers", e);
             }
@@ -335,7 +335,7 @@ public class QuarkusStreamableHttpMcpTransport implements McpTransport {
                                                         operationHandler.onMessage(responseString);
                                                         return;
                                                     }
-                                                } catch (JsonProcessingException ignored) {
+                                                } catch (JacksonException ignored) {
                                                 }
                                             }
                                             future.completeExceptionally(
