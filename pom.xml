@@ -53,9 +53,7 @@
     <wiremock.version>3.13.1</wiremock.version>
     <quarkus-neo4j.version>6.7.2</quarkus-neo4j.version>
     <quarkus-qdrant.version>0.2.0</quarkus-qdrant.version>
-    <jlama.version>0.8.4</jlama.version>
     <google-auth-library-oauth2-http.version>1.42.1</google-auth-library-oauth2-http.version>
-    <gpu-llama3.version>1.0.0-jdk21</gpu-llama3.version>
     <smallrye-certificate-generator.version>0.9.2</smallrye-certificate-generator.version>
     <apicurio-registry-sdk.version>3.3.0</apicurio-registry-sdk.version>
   </properties>
@@ -346,12 +344,6 @@
                     </dependency>
                     <dependency>
                         <groupId>io.quarkiverse.langchain4j</groupId>
-                        <artifactId>quarkus-langchain4j-jlama</artifactId>
-                        <version>${project.version}</version>
-                        <classifier>codestarts</classifier>
-                    </dependency>
-                    <dependency>
-                        <groupId>io.quarkiverse.langchain4j</groupId>
                         <artifactId>quarkus-langchain4j-easy-rag</artifactId>
                         <version>${project.version}</version>
                         <classifier>codestarts</classifier>
@@ -406,15 +398,6 @@
         <modules>
             <module>samples</module>
         </modules>
-    </profile>
-    <profile>
-        <id>jdk25</id>
-        <activation>
-            <jdk>[25,)</jdk>
-        </activation>
-        <properties>
-            <gpu-llama3.version>1.0.0-jdk25</gpu-llama3.version>
-        </properties>
     </profile>
   </profiles>
 
